@@ -10,7 +10,7 @@ import {
   CLEAR_DETAIL,
 } from "./action_types";
 
-const URL_BASE = "http://localhost:3001/drivers";
+const URL_BASE = "/drivers";
 
 export const getAllDrivers = () => {
   return async function (dispatch) {
@@ -54,7 +54,7 @@ export const clearDetail = () => {
 
 export const getTeams = () => {
   return async (dispatch) => {
-    const { data } = await axios.get("http://localhost:3001/teams");
+    const { data } = await axios.get("/teams");
     dispatch({
       type: GET_TEAMS,
       payload: data,
